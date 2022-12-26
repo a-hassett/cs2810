@@ -1,0 +1,24 @@
+# Leaf Procedure
+
+# let's call the leaf function
+li $s0, 15
+jal 13, $zero
+
+
+
+# leaf function
+leaf:
+	addi $sp, $sp, -4
+	sw $s0, 0($sp)
+	
+	li $s0, 4
+	li $s0, 4
+	add $s0, $s0, $t0
+	
+	add $v0, $s0, $zero
+	
+	lw $s0, 0 ($sp)
+	addi $sp, $sp, 4
+	
+exit
+	
